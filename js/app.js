@@ -1,9 +1,9 @@
 
 $( document ).ready(()=> {
   let count=1;
+  const { origin } = window
   
   $('#iFrame-adder').click(() => {
-    
     let counter = count++ ;
     
     $("body").append(`
@@ -22,12 +22,14 @@ $( document ).ready(()=> {
     $('.close').on('mousedown', close);
   });
   
+  
   let messages = [];
+  
   window.addEventListener('message', (e) => {
     messages.push(e.data);
     
     $('iframe').each(i => {
-      $('iframe')[i].contentWindow.postMessage(messages, '*')
+      $('iframe')[i].contentWindow.postMessage(messages, origin)
     });
   }, false);
   
@@ -40,7 +42,7 @@ $( document ).ready(()=> {
     messages.push(`[system] - ${name} left the conversation.`);
     
    $('iframe').each(i => {
-     $('iframe')[i].contentWindow.postMessage(messages, '*')
+     $('iframe')[i].contentWindow.postMessage(messages, origin)
    });
   }
   
