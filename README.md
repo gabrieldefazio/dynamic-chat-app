@@ -2,7 +2,7 @@
 ### Demo: https://gabrieldefazio.github.io/dynamic-chat-app/
 
 #### Bonus
-For site at:
+For:
 https://www.underarmour.com/en-us/mens/new-arrivals/g/39272
 
  Open browser dev tools and enter the following code snippet in the console to hide all products that cost more than $100.
