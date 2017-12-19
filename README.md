@@ -7,7 +7,7 @@
 * All iframes are draggable.
 
 
-###Bonus
+### Bonus
  Enter the following code snippet to https://www.underarmour.com/en-us/mens/new-arrivals/g/392
  to hide all products that cost more than $100.
 ```
