@@ -11,7 +11,7 @@ $( document ).ready(()=> {
             <h2>iFrame${counter}</h2>
             <div class="fa fa-times fa-2x close"></div>
             <div class="iframe-wrap">
-                <iframe class="chat-box" name="iFrame_${counter}" src="./chatBox.html"></iframe>
+                <iframe class="chat" name="iFrame${counter}" src="./chatBox.html"></iframe>
             </div>
         </div>
     `)
@@ -22,9 +22,26 @@ $( document ).ready(()=> {
     $('.close').on('mousedown', close);
   });
   
+  let messages = [];
+  window.addEventListener('message', (e) => {
+    messages.push(e.data);
+    
+    $('iframe').each(i => {
+      $('iframe')[i].contentWindow.postMessage(messages, '*')
+    });
+  }, false);
+  
+  
   function close(e) {
     e.stopPropagation();
+    const name = $(this).parent().children(":first").html();
     $(this).parent().remove()
+  
+    messages.push(`[system] - ${name} left the conversation.`);
+    
+   $('iframe').each(i => {
+     $('iframe')[i].contentWindow.postMessage(messages, '*')
+   });
   }
   
   //taken from jQuery UI draggable
