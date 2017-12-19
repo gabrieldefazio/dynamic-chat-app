@@ -10,4 +10,4 @@ https://www.underarmour.com/en-us/mens/new-arrivals/g/39272
 $('.tile').each(i=>{
    const price = $('.tile')[i].children[5].innerText
    $('.tile')[i].style.visibility = +price.slice(1) > 100 ? "hidden" : "visible"
-})
+})# dynamic-chat-app
