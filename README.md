@@ -1,13 +1,7 @@
-# dynamic-chat-app
+## Technical Challenge Assignment for Dynamic Yield
+### Demo: https://gabrieldefazio.github.io/dynamic-chat-app/
 
-## Running this client-side chat app:
-* Fork or download this repo => https://github.com/gabrieldefazio/dynamic-chat-app
-* Open up `index.html` in your favorite browser 
-* Click the '+' in the upper right hand corner to add a new window.
-* All iframes are draggable.
-
-
-### Bonus
+#### Bonus
 For site at:
 https://www.underarmour.com/en-us/mens/new-arrivals/g/39272
 
