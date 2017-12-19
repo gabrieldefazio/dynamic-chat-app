@@ -8,8 +8,10 @@
 
 
 ### Bonus
- Enter the following code snippet to https://www.underarmour.com/en-us/mens/new-arrivals/g/39272
- to hide all products that cost more than $100.
+For site at:
+https://www.underarmour.com/en-us/mens/new-arrivals/g/39272
+
+ Open browser dev tools and enter the following code snippet in the console to hide all products that cost more than $100.
 ```
 $('.tile').each(i=>{
    const price = $('.tile')[i].children[5].innerText
